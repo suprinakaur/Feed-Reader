@@ -37,8 +37,8 @@ $(function() {
           for(i in allFeeds)
               {
                 expect(allFeeds[i].url).toBeDefined();
-               expect(allFeeds[i].url).not.toBeNull();
-              expect(allFeeds[i].url).not.toBe("");
+                expect(allFeeds[i].url).not.toBeNull();
+                expect(allFeeds[i].url).not.toBe("");
               
         }  
            });
@@ -50,10 +50,11 @@ $(function() {
    
         
      it("is name defined",function(){
-          for(i in allFeeds){
-                expect(allFeeds[i].name).toBeDefined();
-               expect(allFeeds[i].name).not.toBeNull();
-              expect(allFeeds[i].name).not.toBe("");
+          for(i in allFeeds)
+          {
+             expect(allFeeds[i].name).toBeDefined();
+             expect(allFeeds[i].name).not.toBeNull();
+             expect(allFeeds[i].name).not.toBe("");
               
         }  
            });
@@ -88,8 +89,8 @@ $(function() {
                {
                 $(".menu-icon-link").click();
                 expect($('body').hasClass("menu-hidden")).not.toBe(true);
-                   $(".menu-icon-link").click();
-                   expect($('body').hasClass("menu-hidden")).toBe(true);
+                $(".menu-icon-link").click();
+                expect($('body').hasClass("menu-hidden")).toBe(true);
             });
         });
 
@@ -146,7 +147,7 @@ $(function() {
                          loadFeed(1,function()
                                   {
                               newFeed = $('.feed').html();
-                             done();
+                              done();
                          });
                          
                      });
