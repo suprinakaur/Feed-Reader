@@ -33,12 +33,12 @@ $(function() {
          */
 
         
-        it('is URL defined',function(){
-          for(i in allFeeds)
-              {
-                expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBeNull();
-                expect(allFeeds[i].url).not.toBe("");
+        it('Has url defined and not null', function() 
+           {
+             for(var i=0; i < allFeeds.length; i++)
+             {
+               expect(allFeeds[i].url).toBeDefined();
+               expect(allFeeds[i].url.length > 0).toBe(true);
               
         }  
            });
@@ -49,13 +49,12 @@ $(function() {
          */
    
         
-     it("is name defined",function(){
-          for(i in allFeeds)
-          {
+      it("Has name and isn't null", function()
+         {
+           for(var i = 0; i < allFeeds.length; i++)
+           {
              expect(allFeeds[i].name).toBeDefined();
-             expect(allFeeds[i].name).not.toBeNull();
-             expect(allFeeds[i].name).not.toBe("");
-              
+             expect(allFeeds[i].name.length > 0).toBe(true);
         }  
            });
     });
@@ -131,11 +130,6 @@ $(function() {
     /* TODO: Write a new test suite named "New Feed Selection" */
             describe("New Feed Selection",function()
                      {
-
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
                 
                 var oldFeed;
                 var newFeed;
